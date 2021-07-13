@@ -1,2 +1,3 @@
 # btl-ltm1
-html - css - js only
+My first project - frontend web using html - css - js only.
+First project with a lots of bugs.
