@@ -1,0 +1,58 @@
+body{
+	background-color: #007bff;
+	font-family: sans-serif;
+}
+.signup{	
+	margin-top: 50px;
+	margin-left: 380px;
+	width: 600px;
+	height: 500px;
+	background-color: white;
+	border: 1px silver solid;
+	border-radius: 10px;
+}
+.topsignup{
+	display: inline-block;
+	margin-top: 0px;
+	width: 600px;
+	height: 80px;
+	background-color: #F5F5F5;
+	border:0px;
+	border-radius: 10px;
+	text-align: center;
+}
+ h3 {
+	color: #999999;
+	text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+.signup input {
+	margin-left: 15px;
+	margin-top: -10px;
+	margin-bottom: 1px;
+}
+.btcreat button{
+	width: 550px;
+	height: 33px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: white;
+	margin-top: 40px;
+	margin-left: 20px;
+}
+.botsignup{
+	display: inline-block;
+	width: 601px;
+	height: 40px;
+	background-color: #F5F5F5;
+	border:0px;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 22px;
+	padding-top: 15px;
+
+}
+
+

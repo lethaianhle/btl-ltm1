@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cartZ.css">
+</head>
+<body>
+    <div>
+        <ul class="menu-cap3 clearfix">
+          <li><img src="img/mt.PNG"></li>
+          <li><img id="logooo" src="img/BMW.svg" width="30px" height="30px"></li>
+          <li><img src="img/mt.PNG" width="10px"></li>
+          <li><a href="INDEX.html">Home</a></li>
+          <li><a>Career</a>
+            <ul class="menu-sub">
+              <li><a href="ForumZ.html">Forum</a></li>
+              <li><a href="#">About us</a> 
+                 <ul class="menu-sub">
+                     <li><a href="RateZ.html">Rate</a></li>
+                     <li><a href="ContactZ.html">Contact</a></li>
+                 </ul>
+              </li>
+            </ul>
+          </li>         
+          <li><a href="Stores.html" >Store</a> </li>
+          <li><a href="PrivacyandLegal.html" >Privacy</a></li>
+          <li><a href="History.html">History</a></li>
+          
+      <a id="loginnn" href="LoginZ.html">Login/Signup</a>
+      <a id="carttt" href="CartZ.html"><img src="img/iconcart.png" width="18px" height="18px"><span id="count" style="color: white;">0</span></a>
+      </ul>
+      </div>
+<br><br><br>
+      <div id="table1">
+
+      </div>
+
+      <script>
+        var obj = JSON.parse(localStorage.getItem('item'));
+    
+        var total = 0;
+        for (var i = 0; i < obj.length; i++) {
+            total += obj[i].price;
+    
+        }
+        document.getElementById('count').innerHTML = obj.length;
+        var html = '<table style="margin-left: 300px;margin-right: 100px;" border="1px silver solid"; width="50%"; margin-bottom:50px;>';
+            html += ' <button style="margin-left:300px;text-align: center;width: 75px;height: 33px;	border: none;border-radius: 5px;background-color: #007bff;color: white; " class="btn-remove" onclick="myFunction()">' + 'Remove all' + '</button>';
+        html += '<tr>';
+    
+        html += '<th>Name</th>';
+        html += '<th>Price</th>';
+        html += '<th></th>';
+    
+        html += '</tr>';
+        for (var i = 0; i < obj.length; i++) {
+            html += '<tr>';
+            html += '<td>' + obj[i].name + '</td>';
+            html += '<td>' + (obj[i].price) + ' $ </td>';
+            html += '<td style="margin-left: 50px;"> <button type="button" style="text-align: center;width: 75px;height: 33px;	border: none;border-radius: 5px;background-color: #007bff;color: white; ">' + 'Remove' + ' </button></td>';
+            html += '</tr>';
+        }
+        html += '<td><b>Total:</b></td>';
+        html += '<td><b> ' + (total) + ' $</b> </td>';
+        html += '</table>';
+        // //funtion remove all
+        function myFunction(){
+            localStorage.clear();
+            location.reload();
+        }
+        document.getElementById('table1').innerHTML = html;   
+    </script>   
+</body>
+</html>

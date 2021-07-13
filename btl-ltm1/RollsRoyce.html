@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Store.css">
+    <title>Store</title>
+</head>
+<body>
+
+    <div class="CAR">
+        <div class="carRollsRoyce">
+            <div class="anh">
+                <img src="anh/sp12.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model Phantom</p>
+                <p style="text-align: center">56.781 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model Phantom',56.781 )">Buy</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //add giỏ hàng
+    var arr = []; //khai báo mảng
+    if (localStorage.getItem('item') != null) {
+        arr = JSON.parse(localStorage.getItem('item'));
+    }
+    document.getElementById('count').innerHTML = arr.length;
+
+    function buy(name, price) {
+        alert('Add to cart')
+        arr.push({'name': name, 'price': price});// đẩy vào mảng tên với giá
+        console.log(arr); //hiển thị mảng
+        localStorage.setItem('item', JSON.stringify(arr));
+        document.getElementById('count').innerHTML = arr.length;
+    }
+
+    </script>
+
+</body>
+</html>

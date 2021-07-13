@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>LoginZ</title>
+	<link rel="stylesheet" type="text/css" href="loginz.css">
+</head>
+
+<body>
+	<div class="login">
+		<div class="toplogin">
+			<h3>Login</h3>
+		</div><br>
+
+	<form method="POST" onsubmit="return validateForm()">
+			<p class="emaillg">Email</p><br>
+			<input id="username" type="text" placeholder="Enter email adress" name=""><br>
+			<p class="emaillg">Password</p><br>
+			<input id="password" type="password" placeholder="Enter password" name="">
+		
+
+		<div class="checkbtfgp">
+			<div class="Remember"><input type="checkbox" name=""> Remember me</div>
+			<br>
+			<div class="Forgot"><a href=""><font style="color: #007bff">Forgot Password</font></a></div>
+			<div class="btlogin"><a href="INDEX.html"><button  type="submit" id="">Login</button></a></div>
+		</div>
+	</form>
+		<div class="botlogin">
+			<a href="SignupZ.html">
+				<font style="color:#007bff ">Need an accout? Sign up!</font>
+			</a>
+		</div>
+	</div>
+
+	<!-- Xử lý đăng nhập js -->
+	<script>
+		function validateForm(){
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+
+			//Check username
+			if(username == '' || password==''){
+				alert('Chưa nhập tên đăng nhập hoặc mật khẩu');
+			}
+			else if (username == 'admin' && password == '1'){
+				window.location.replace("INDEX.html");
+			} 
+			else {
+				alert('Sai tên đăng nhập hoặc mật khẩu');
+				return true;
+			}						
+			return false;
+		}
+		
+	</script>
+</body>
+
+</html>

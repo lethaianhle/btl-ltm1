@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Store.css">
+    <title>Store</title>
+</head>
+<body>
+
+    <div>
+        <ul class="menu-cap3 clearfix">
+          <li><img src="img/mt.PNG"></li>
+          <li><img id="logooo" src="img/BMW.svg" width="30px" height="30px"></li>
+          <li><img src="img/mt.PNG" width="10px"></li>
+          <li><a href="INDEX.html">Home</a></li>
+          <li><a>Career</a>
+            <ul class="menu-sub">
+              <li><a href="ForumZ.html">Forum</a></li>
+              <li><a href="#">About us</a> 
+                 <ul class="menu-sub">
+                     <li><a href="RateZ.html">Rate</a></li>
+                     <li><a href="ContactZ.html">Contact</a></li>
+                 </ul>
+              </li>
+            </ul>
+          </li>         
+          <li><a href="Stores.html" >Store</a> </li>
+          <li><a href="PrivacyandLegal.html" >Privacy</a></li>
+          <li><a href="History.html">History</a></li>
+          
+      <a id="loginnn" href="LoginZ.html">Login/Signup</a>
+      <a id="carttt" href="CartZ.html"><img src="img/iconcart.png" width="18px" height="18px"></a>
+      </ul>
+      </div>
+
+    <div>
+        <iframe src="S.html" style="border:none;" height="653px" width="1366px"></iframe>
+    </div>
+    <script>
+      //add giỏ hàng
+  var arr = []; //khai báo mảng
+  if (localStorage.getItem('item') != null) {
+      arr = JSON.parse(localStorage.getItem('item'));
+  }
+  document.getElementById('count').innerHTML = arr.length;
+
+  function buy(name, price) {
+      alert('Add to cart')
+      arr.push({'name': name, 'price': price});// đẩy vào mảng tên với giá
+      console.log(arr); //hiển thị mảng
+      localStorage.setItem('item', JSON.stringify(arr));
+      document.getElementById('count').innerHTML = arr.length;
+  }
+
+  </script>
+    
+</body>
+</html>

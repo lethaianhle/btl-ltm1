@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Store.css">
+    <title>Store</title>
+</head>
+<body>
+
+    <div class="CAR">
+        <div class="carLexus">
+            <div name="anh1">
+                <img src="anh/sp1.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model RC 300</p>
+                <p style="text-align: center">3.290 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model RC 300',3.290)">Buy</button>
+                </p>
+            </div>
+        </div>
+    
+        <div class="carLexus">
+            <div name="anh1">
+                <img src="anh/sp2.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model LS 500</p>
+                <p style="text-align: center">7.280 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model LS 500',7.280)">Buy</button>
+                </p>
+            </div>
+        </div>
+    
+        <div class="carLexus">
+            <div name="anh1">
+                <img src="anh/sp3.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model ES 250</p>
+                <p style="text-align: center">2.540 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model ES 250',2.540)">Buy</button>
+                </p>
+            </div>
+        </div>    
+    </div>
+    <script>
+        //add giỏ hàng
+    var arr = []; //khai báo mảng
+    if (localStorage.getItem('item') != null) {
+        arr = JSON.parse(localStorage.getItem('item'));
+    }
+    document.getElementById('count').innerHTML = arr.length;
+
+    function buy(name, price) {
+        alert('Add to cart')
+        arr.push({'name': name, 'price': price});// đẩy vào mảng tên với giá
+        console.log(arr); //hiển thị mảng
+        localStorage.setItem('item', JSON.stringify(arr));
+        document.getElementById('count').innerHTML = arr.length;
+    }
+
+    </script>
+
+</body>
+</html>

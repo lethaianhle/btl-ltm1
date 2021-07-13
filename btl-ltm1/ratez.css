@@ -1,0 +1,101 @@
+*{margin:0;padding:0;}
+.clearfix:before,.clearfix:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.menu-cap3{
+	width: 100%px;
+	margin: 0 auto;
+	list-style: none;
+	background-color: #343a40;
+}
+.menu-cap3 > li{
+	float: left;
+}
+.menu-cap3 > li a{
+	font-size: 16px;
+	display: block;
+	padding: 10px 30px;
+	text-decoration: none;
+	color: #fff;
+}
+.menu-cap3 > li:last-child a{
+	border-right: 0;
+}
+.menu-cap3 li{
+	position: relative;
+}
+.menu-cap3 li .menu-sub{
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 200px;
+	box-shadow: 0px 1px 8px -4px #333;
+	background-color: #706d69;
+	display: none;
+}
+.menu-cap3 li .menu-sub ul{
+	top: 0;
+	left: 100%;
+}
+.menu-cap3 li:hover > ul{
+	display: block;
+}
+.menu-cap3 li:hover > a {
+	background: #ffffff;
+	color: #333;
+}
+#loginnn{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin-left: 600px;
+	margin-top:17px;
+}
+#carttt{
+	display: inline-block;
+	margin-left: 10px;
+
+}
+#logooo{
+	margin-top: 4px;
+
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    color: red;  
+}
+.danhgia {
+	margin-top: -100px;
+    width: 100%;
+    height: 700px; 
+	background-image: url('mysl/lambo1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.khung {
+	display: block;
+	width: 500px;
+	height: 300px;
+	border: 1px silver solid;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 100px;
+	margin-left: 100px;
+	background-image: url(img/rate5s.jpg);
+	background-size: cover;
+}
+.danhgia button{
+	width: 75px;
+	height: 33px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: white;
+	margin-left: 30px;
+	margin-top: 20px;
+}

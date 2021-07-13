@@ -1,0 +1,98 @@
+body{
+	background-color: #007bff;
+	font-family: sans-serif;
+}
+.login{	
+	margin-top: 50px;
+	margin-left: 470px;
+	width: 450px;
+	height: 500px;
+	background-color: white;
+	border: 1px silver solid;
+	border-radius: 10px;
+	text-align: center;
+
+}
+.toplogin{
+	display: inline-block;
+	margin-top: 0px;
+	width: 450px;
+	height: 80px;
+	background-color: #F5F5F5;
+	border:0px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.login h3 {
+	color: #999999;
+	text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.login input{
+	height: 50px;
+	width: 400px;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+	padding-left: 20PX;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.checkbtfgp input{
+	width: 15px;
+	height: 15px;
+}
+.login button{
+	width: 75px;
+	height: 33px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: white;
+}
+.emaillg {
+	display: inline-block;
+	float: left;
+	padding-left: 17px;
+	margin: 0px;
+	margin-top: 15px;
+}
+.bottomlg{
+	background-color: white;
+	height: 60px;
+	width:  100%;
+	margin-left: 0px;
+}
+.Remember {
+	display: inline-block;
+	float: left;
+	margin-left: 15px;
+}
+.botlogin{
+	display: inline-block;
+	margin-top: 70px;
+	width: 450px;
+	height: 40px;
+	background-color: #F5F5F5;
+	border:0px;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 17px;
+}
+
+.Forgot{
+	float: left;
+	margin-left: -125px;
+	margin-top: 40px;
+}
+.btlogin {
+	float: right;
+	margin-right: 30px;
+	margin-top: 40px; 
+}
+
+
+
+

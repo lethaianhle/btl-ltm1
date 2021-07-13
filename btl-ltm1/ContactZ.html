@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul class="menu-cap3 clearfix">
+          <li><img src="img/mt.PNG"></li>
+          <li><img id="logooo" src="img/BMW.svg" width="30px" height="30px"></li>
+          <li><img src="img/mt.PNG" width="10px"></li>
+          <li><a href="INDEX.html">Home</a></li>
+          <li><a>Career</a>
+            <ul class="menu-sub">
+              <li><a href="ForumZ.html">Forum</a></li>
+              <li><a href="#">About us</a> 
+                 <ul class="menu-sub">
+                     <li><a href="RateZ.html">Rate</a></li>
+                     <li><a href="ContactZ.html">Contact</a></li>
+                 </ul>
+              </li>
+            </ul>
+          </li>         
+          <li><a href="Stores.html" >Store</a> </li>
+          <li><a href="PrivacyandLegal.html" >Privacy</a></li>
+          <li><a href="History.html">History</a></li>
+          
+      <a id="loginnn" href="LoginZ.html">Login/Signup</a>
+      <a id="carttt" href="CartZ.html"><img src="img/iconcart.png" width="18px" height="18px"></a>
+      </ul>
+      </div>
+    <div class="tb2">
+        <table style="align-items: center; margin-left: 400px; margin-top: 100px;">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="color: royalblue; font-size: 25px;">  &nbspDrop us a line</td>
+                        </tr>
+                        <tr>
+                            <td><input id="user" type=text value="" placeholder=" Enter your full name"></td>
+                        </tr>
+                        <tr>
+                            <td><input id="email" type=email value="" placeholder=" Enter your email "></td>
+                        </tr>
+                        <tr>
+                            <td><textarea id="sendms" rows="9" cols="60" placeholder=" Send Message" style="border: 1px silver solid;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="tks()">Send</button></td>
+                        </tr>
+                    </table>
+                </td>
+                <td><img id="the" src="anh/ctac.jpg"></td>
+            </tr>
+        </table>
+
+
+    </div>
+    <script>
+        function tks() {
+            alert('Thank you for your messenge');
+        }
+    </script>
+
+<style>
+*{margin:0;padding:0;}
+.clearfix:before,.clearfix:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.menu-cap3{
+	width: 100%px;
+	margin: 0 auto;
+	list-style: none;
+	background-color: #343a40;
+}
+.menu-cap3 > li{
+	float: left;
+}
+.menu-cap3 > li a{
+	font-size: 16px;
+	display: block;
+	padding: 10px 30px;
+	text-decoration: none;
+	color: #fff;
+}
+.menu-cap3 > li:last-child a{
+	border-right: 0;
+}
+.menu-cap3 li{
+	position: relative;
+}
+.menu-cap3 li .menu-sub{
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 200px;
+	box-shadow: 0px 1px 8px -4px #333;
+	background-color: #706d69;
+	display: none;
+}
+.menu-cap3 li .menu-sub ul{
+	top: 0;
+	left: 100%;
+}
+.menu-cap3 li:hover > ul{
+	display: block;
+}
+.menu-cap3 li:hover > a {
+	background: #ffffff;
+	color: #333;
+}
+#loginnn{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin-left: 600px;
+	margin-top:17px;
+}
+#carttt{
+	display: inline-block;
+	margin-left: 10px;
+
+}
+#logooo{
+	margin-top: 4px;
+
+}
+.tb2 input{
+	height: 50px;
+	width: 400px;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+	padding-left: 20PX;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.tb2 button{
+	width: 75px;
+	height: 33px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+    color: white;
+    margin-top: 10px;
+}
+.tb2 img{
+    margin-left: 20px;
+}
+</style>
+</html>

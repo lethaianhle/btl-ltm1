@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Store.css">
+    <title>Store</title>
+</head>
+<body>
+
+    <div class="CAR">
+        <div class="carBMW">
+            <div class="anh">
+                <img src="anh/sp7.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model I8</p>
+                <p style="text-align: center">3.777 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model I8 2019',3.777)">Buy</button>
+                </p>
+            </div>
+        </div>
+    
+        <div class="carBMW">
+            <div class="anh">
+                <img src="anh/sp8.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model 740Li LCI</p>
+                <p style="text-align: center">5.369 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model 740Li LCI',5.369)">Buy</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //add giỏ hàng
+    var arr = []; //khai báo mảng
+    if (localStorage.getItem('item') != null) {
+        arr = JSON.parse(localStorage.getItem('item'));
+    }
+    document.getElementById('count').innerHTML = arr.length;
+
+    function buy(name, price) {
+        alert('Add to cart')
+        arr.push({'name': name, 'price': price});// đẩy vào mảng tên với giá
+        console.log(arr); //hiển thị mảng
+        localStorage.setItem('item', JSON.stringify(arr));
+        document.getElementById('count').innerHTML = arr.length;
+    }
+
+    </script>
+
+</body>
+</html>

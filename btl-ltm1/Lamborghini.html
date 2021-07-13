@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Store.css">
+    <title>Store</title>
+</head>
+<body>
+
+    <div class="CAR">
+        <div class="carLamborghini">
+            <div name="anh1">
+                <img src="anh/sp4.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model LP700-4 Roadster</p>
+                <p style="text-align: center">9.340 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model LP700-4 Roadster',9.340)">Buy</button>
+                </p>
+            </div>
+        </div>
+    
+        <div class="carLamborghini">
+            <div name="anh1">
+                <img src="anh/sp5.jpg" height="300px" width="100%">
+                <p style="text-align: center" class="s"> Model LP580-2 Huracan</p>
+                <p style="text-align: center">4.542 $</p>
+                <p style="text-align: center">
+                    <button class="btnadd" onclick="buy('Model LP580-2 Huracan',4.542)">Buy</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //add giỏ hàng
+    var arr = []; //khai báo mảng
+    if (localStorage.getItem('item') != null) {
+        arr = JSON.parse(localStorage.getItem('item'));
+    }
+    document.getElementById('count').innerHTML = arr.length;
+
+    function buy(name, price) {
+        alert('Add to cart')
+        arr.push({'name': name, 'price': price});// đẩy vào mảng tên với giá
+        console.log(arr); //hiển thị mảng
+        localStorage.setItem('item', JSON.stringify(arr));
+        document.getElementById('count').innerHTML = arr.length;
+    }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RateZ</title>
+    </head>
+    <link rel="stylesheet" href="ratez.css">
+    <body>
+        <div>
+            <ul class="menu-cap3 clearfix">
+              <li><img src="img/mt.PNG"></li>
+              <li><img id="logooo" src="img/BMW.svg" width="30px" height="30px"></li>
+              <li><img src="img/mt.PNG" width="10px"></li>
+              <li><a href="INDEX.html">Home</a></li>
+              <li><a>Career</a>
+                <ul class="menu-sub">
+                  <li><a href="ForumZ.html">Forum</a></li>
+                  <li><a href="#">About us</a> 
+                     <ul class="menu-sub">
+                         <li><a href="RateZ.html">Rate</a></li>
+                         <li><a href="ContactZ.html">Contact</a></li>
+                     </ul>
+                  </li>
+                </ul>
+              </li>         
+              <li><a href="Stores.html" >Store</a> </li>
+              <li><a href="PrivacyandLegal.html" >Privacy</a></li>
+              <li><a href="History.html">History</a></li>
+              
+          <a id="loginnn" href="LoginZ.html">Login/Signup</a>
+          <a id="carttt" href="CartZ.html"><img src="img/iconcart.png" width="18px" height="18px"></a>
+          </ul>
+          </div>
+        <div class="danhgia">
+          <div class="khung">
+            <h1>
+                RATE ME FIVE STARS ?
+            </h1>       
+            <button type="button" class="button" onclick="yes()">YES</button>
+            <button type="button" class="button" id="dichuyen" onmouseover="no()" style="position: absolute">NO</button>
+          </div>
+        </div>       
+        <script>
+                function yes() {
+                alert("THANK YOU <3");
+            }       
+            function no() {
+                let widthl = Math.round(Math.random() * window.innerWidth);
+                let hightl = Math.round(Math.random() * window.innerHeight);
+                document.getElementById("dichuyen").style.left = widthl + 'px';
+                document.getElementById("dichuyen").style.top = hightl + 'px'
+            }
+        </script>              
+        </body>
+        </html>
+    </body>
+</html>
